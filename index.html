@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Bootcamp - Secure Your Next Great Role in Switzerland</title>
+    <meta name="description" content="Join 250+ professionals who've transformed their careers with our AI-powered career coaching in Switzerland. Proven results since 2019.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- CSS Variables for Theming --- */
+        :root {
+            --primary-color: #008080; /* Teal */
+            --primary-hover-color: #006666;
+            --secondary-color: #f0f8f8; /* Light Teal */
+            --text-color: #333;
+            --light-text-color: #666;
+            --heading-font: 'Poppins', sans-serif;
+            --body-font: 'Roboto', sans-serif;
+            --border-color: #e0e0e0;
+            --max-width: 1200px;
+        }
+
+        /* --- Basic Reset & Global Styles --- */
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: var(--body-font);
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--heading-font);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        h1 { font-size: 2.8rem; }
+        h2 { font-size: 2.2rem; text-align: center; margin-bottom: 1rem; }
+        h3 { font-size: 1.5rem; }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        /* --- Navbar Styles --- */
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+        .navbar .logo {
+            font-family: var(--heading-font);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        .navbar .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            gap: 25px;
+        }
+        .navbar .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .navbar .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        .navbar .nav-cta {
+            margin-left: 15px;
+        }
+        .navbar .mobile-menu-icon {
+            display: none;
+            font-size: 1.5rem;
+            color: var(--text-color);
+            cursor: pointer;
+        }
+
+        /* --- Buttons --- */
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            font-family: var(--body-font);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: var(--primary-hover-color);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+        .btn-secondary:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/seed/career-bootcamp-hero/1920/1080.jpg') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 120px 0 80px 0;
+        }
+        .hero h1 { font-size: 3.5rem; max-width: 800px; margin: 0 auto 20px auto; }
+        .hero .subheadline { font-size: 1.2rem; max-width: 700px; margin: 0 auto 40px auto; }
+        .hero .value-prop-bar {
+            background-color: rgba(0, 128, 128, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 40px;
+            font-size: 0.9rem;
+        }
+        .hero .cta-buttons .btn { margin: 10px; }
+        
+        /* --- Trust Indicators --- */
+        .trust-indicators {
+            background-color: var(--secondary-color);
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .trust-indicators .grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .trust-indicators .grid-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+        }
+        
+        /* --- Section General Styling --- */
+        .section-title { text-align: center; margin-bottom: 60px; }
+        .section-subtitle { text-align: center; max-width: 700px; margin: -40px auto 60px auto; color: var(--light-text-color); }
+
+        /* --- Problem / Solution Section --- */
+        .problem-solution .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .problem-solution .card {
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .problem-solution .card h3 { color: var(--primary-color); }
+        .problem-solution .card ul { list-style: none; padding: 0; }
+        .problem-solution .card ul li { padding-left: 20px; position: relative; }
+        .problem-solution .card ul li::before { content: '▪'; color: var(--primary-color); position: absolute; left: 0; }
+        .problem-solution .transition-statement {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 1.1rem;
+            font-style: italic;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- Programs Section --- */
+        .programs { background-color: var(--secondary-color); }
+        .programs .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .program-card {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .program-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+        .program-card .icon { font-size: 3rem; text-align: center; }
+        .program-card h3 { text-align: center; margin-top: 10px; }
+        .program-card .tagline { text-align: center; color: var(--light-text-color); margin-bottom: 20px; }
+        .program-card .best-for { background-color: #f4f4f4; padding: 10px; border-radius: 5px; font-size: 0.9rem; margin-bottom: 20px; }
+        .program-card ul { list-style: none; padding: 0; flex-grow: 1; }
+        .program-card ul li { padding-left: 20px; position: relative; margin-bottom: 10px; }
+        .program-card ul li::before { content: '✓'; color: var(--primary-color); position: absolute; left: 0; font-weight: bold; }
+        .program-card .investment { font-weight: bold; margin: 20px 0; }
+        .program-card .cta { margin-top: auto; }
+
+        /* --- Why It Works Section --- */
+        .why-it-works .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .why-it-works .benefit-block {
+            text-align: center;
+            padding: 20px;
+        }
+        .why-it-works .benefit-block .icon { font-size: 2.5rem; color: var(--primary-color); }
+
+        /* --- Testimonials Section --- */
+        .testimonials { background-color: var(--secondary-color); }
+        .testimonial-slider {
+            position: relative;
+            overflow: hidden;
+        }
+        .testimonial-slide {
+            display: none;
+            text-align: center;
+            padding: 0 100px;
+        }
+        .testimonial-slide.active { display: block; }
+        .testimonial-slide p { font-style: italic; font-size: 1.1rem; max-width: 800px; margin: 0 auto 20px auto; }
+        .testimonial-slide .author { font-weight: 500; }
+        .testimonial-slide .rating { color: #ffc107; font-size: 1.2rem; }
+        .slider-controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .slider-controls button {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: var(--primary-color);
+            cursor: pointer;
+            padding: 0 15px;
+        }
+
+        /* --- Client Logos Section --- */
+        .client-logos .logo-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+        .client-logos .logo-grid:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+        .client-logos .logo-grid img {
+            max-height: 50px;
+            width: auto;
+        }
+
+        /* --- Tax Deduction Highlight --- */
+        .tax-deduction {
+            background-color: var(--secondary-color);
+            border-left: 5px solid var(--primary-color);
+            padding: 20px 30px;
+            margin: 40px auto;
+            max-width: 800px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .tax-deduction .icon { font-size: 2rem; color: var(--primary-color); }
+
+        /* --- How It Works Section --- */
+        .how-it-works .timeline {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .how-it-works .timeline::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background-color: var(--border-color);
+            z-index: -1;
+        }
+        .timeline-step {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid var(--primary-color);
+        }
+        .timeline-step .icon { font-size: 2rem; color: var(--primary-color); }
+        .timeline-step p { margin: 0; font-size: 0.9rem; }
+
+        /* --- FAQ Section --- */
+        .faq { background-color: var(--secondary-color); }
+        .faq-item {
+            background: white;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .faq-question {
+            width: 100%;
+            padding: 20px;
+            text-align: left;
+            border: none;
+            background: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-question:hover { background-color: #f9f9f9; }
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+        .faq-question.active::after { content: '-'; }
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+        }
+        .faq-answer.show {
+            padding: 0 20px 20px 20px;
+            max-height: 500px;
+        }
+
+        /* --- Final CTA Section --- */
+        .final-cta {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+        }
+        .final-cta h2 { color: white; }
+        .final-cta .cta-buttons .btn { margin: 10px; }
+        .final-cta .contact-info {
+            margin-top: 30px;
+            font-size: 0.9rem;
+        }
+        .final-cta .contact-info span { margin: 0 10px; }
+
+        /* --- Footer --- */
+        footer {
+            background-color: #222;
+            color: #aaa;
+            padding: 60px 0 20px 0;
+        }
+        footer .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        footer h4 { color: white; font-size: 1rem; font-family: var(--body-font); margin-bottom: 20px; }
+        footer ul { list-style: none; padding: 0; }
+        footer ul li { margin-bottom: 10px; }
+        footer ul li a { color: #aaa; text-decoration: none; transition: color 0.3s ease; }
+        footer ul li a:hover { color: var(--primary-color); }
+        footer .social-icons a { font-size: 1.5rem; margin: 0 10px; color: #aaa; text-decoration: none; }
+        footer .social-icons a:hover { color: var(--primary-color); }
+        footer .copyright {
+            text-align: center;
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            margin-top: 40px;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 992px) {
+            .problem-solution .grid, .programs .grid, .why-it-works .grid, footer .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .how-it-works .timeline { flex-direction: column; align-items: center; gap: 20px; }
+            .how-it-works .timeline::before { width: 4px; height: 100%; top: 0; left: 50%; }
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 1.8rem; }
+            .hero h1 { font-size: 2.2rem; }
+            .problem-solution .grid, .programs .grid, .why-it-works .grid, footer .grid {
+                grid-template-columns: 1fr;
+            }
+            footer .grid { text-align: center; }
+            .testimonial-slide { padding: 0 20px; }
+            .timeline-step { width: 120px; height: 120px; }
+
+            /* --- Mobile Navbar Styles --- */
+            .navbar .nav-links {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background-color: white;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+                padding: 20px 0;
+                gap: 0;
+            }
+            .navbar .nav-links.active {
+                left: 0;
+            }
+            .navbar .nav-links li {
+                margin: 15px 0;
+            }
+            .navbar .mobile-menu-icon {
+                display: block;
+            }
+            .navbar .nav-cta {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- =================== NAVBAR =================== -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Career Bootcamp</a>
+            <ul class="nav-links">
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#testimonials">Success Stories</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#final-cta">Contact</a></li>
+                <li class="nav-cta"><a href="#final-cta" class="btn btn-primary">Book Free Strategy Call</a></li>
+            </ul>
+            <div class="mobile-menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- =================== HERO SECTION =================== -->
+    <header class="hero">
+        <div class="container">
+            <div class="value-prop-bar">
+                Switzerland's High-Impact Career Coaching Boutique | Founded 2019 | Former F1 Executive Leadership | Hand-Selected Senior Coaches | Proven Methodology
+            </div>
+            <h1>Secure Your Next Great Role in Switzerland—Faster, Smarter, with AI-Powered Karrierecoaching</h1>
+            <p class="subheadline">Join 250+ professionals who've transformed their careers since 2019 with our proven Career Bootcamp Method. From job seekers to C-level executives, we deliver results through hand-selected expert coaches and tailored programs.</p>
+            <div class="cta-buttons">
+                <a href="#final-cta" class="btn btn-primary">Book Free Strategy Call</a>
+                <a="#programs" class="btn btn-secondary">Explore Programs</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- =================== TRUST INDICATORS =================== -->
+    <section class="trust-indicators">
+        <div class="container">
+            <div class="grid">
+                <div class="grid-item">⭐ 4.95/5 Client Satisfaction</div>
+                <div class="grid-item">✓ 78% Success Rate Landing Interviews Since 2019</div>
+                <div class="grid-item">🎓 ISO 17024, ICI, CAS Certified Coaches</div>
+                <div class="grid-item">👥 250+ Professionals Coached</div>
+                <div class="grid-item">🏢 30+ Companies</div>
+                <div class="grid-item">🏆 Established Swiss Market Leader</div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <!-- =================== PROBLEM-AGITATION-SOLUTION SECTION =================== -->
+        <section class="problem-solution">
+            <div class="container">
+                <h2 class="section-title">The Swiss Job Market in 2025: Tougher Than Ever—But Not Impossible</h2>
+                <p class="section-subtitle">Since 2019, We've Helped 250+ Professionals Navigate These Exact Challenges</p>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Job Seekers & Expats</h3>
+                        <ul>
+                            <li>Hundreds of applications, zero responses</li>
+                            <li>AI filters blocking your CV before human eyes see it</li>
+                            <li>Swiss "hidden job market" feels impossible to access</li>
+                            <li>Don't know how to "Swissify" your application</li>
+                            <li>Solo coaches lack Swiss market depth; big firms treat you like a number</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Mid-Career Professionals</h3>
+                        <ul>
+                            <li>Stuck in the wrong role, unclear about next steps</li>
+                            <li>Personal brand doesn't reflect your true value</li>
+                            <li>Networking feels awkward and ineffective</li>
+                            <li>Interview skills rusty or never mastered</li>
+                            <li>Need structured guidance, not generic advice</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Executives & Leaders</h3>
+                        <ul>
+                            <li>Ready for C-level or board position but don't know how to position yourself</li>
+                            <li>Executive search process feels opaque</li>
+                            <li>Compensation negotiation anxiety</li>
+                            <li>Need confidential, strategic career guidance</li>
+                            <li>Want coaches who've actually held C-level roles, not just studied them</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="transition-statement">
+                    You're not alone. Since 2019, we've pioneered a proven methodology that combines boutique precision with executive-level expertise. Welcome to Career Bootcamp—where former F1 executives, CHROs, and C-level leaders coach you to victory.
+                </p>
+            </div>
+        </section>
+
+        <!-- =================== PROGRAMS OVERVIEW SECTION =================== -->
+        <section id="programs" class="programs">
+            <div class="container">
+                <h2 class="section-title">Three Programs. One Mission: Your Career Success.</h2>
+                <p class="section-subtitle">Choose the path that fits your ambition and career stage</p>
+                <div class="grid">
+                    <!-- ACCELERATE PROGRAM -->
+                    <article class="program-card">
+                        <div class="icon">🚀</div>
+                        <h3>ACCELERATE</h3>
+                        <p class="tagline">Fast-Track Your Swiss Job Search</p>
+                        <div class="best-for"><strong>Best For:</strong> Job seekers who want practical AI skills and results without weekly coaching</div>
+                        <ul>
+                            <li>12 self-paced online modules</li>
+                            <li>Career Bootcamp app with micro-quests</li>
+                            <li>AI advantage training (4x faster applications)</li>
+                            <li>1 live coaching session with executive coach</li>
+                            <li>CV, LinkedIn, and Swiss application optimization</li>
+                        </ul>
+                        <p><strong>Outcome:</strong> Reskill for AI employability. Up to 4x faster job search.</p>
+                        <p class="investment">Investment: CHF 1,750/month × 3 months</p>
+                        <a href="#final-cta" class="btn btn-primary cta">Start Accelerate Program</a>
+                    </article>
+                    <!-- ELEVATE PROGRAM -->
+                    <article class="program-card">
+                        <div class="icon">📈</div>
+                        <h3>ELEVATE</h3>
+                        <p class="tagline">Transform Your Career in 12 Weeks</p>
+                        <div class="best-for"><strong>Best For:</strong> Professionals needing structure, expert feedback, and community support</div>
+                        <ul>
+                            <li>12-week structured program (CREATE-FIND-SEIZE methodology)</li>
+                            <li>12 weekly live micro-group coaching sessions (5-10 people)</li>
+                            <li>Coaching from hand-selected experts matched to your industry</li>
+                            <li>Bite-sized micro-quests via proprietary Career Bootcamp app</li>
+                            <li>Personal branding and value proposition development</li>
+                        </ul>
+                        <p><strong>Next Cohort Dates:</strong> Dec 1, 2025 | Jan 19, 2026 | Mar 2, 2026</p>
+                        <p class="investment">Investment: CHF 4,750 (flexible payment available)</p>
+                        <a href="#final-cta" class="btn btn-primary cta">Join Next Elevate Cohort</a>
+                    </article>
+                    <!-- EXECUTIVE PROGRAM -->
+                    <article class="program-card">
+                        <div class="icon">💼</div>
+                        <h3>EXECUTIVE</h3>
+                        <p class="tagline">Exclusive Coaching for C-Level Leaders</p>
+                        <div class="best-for"><strong>Best For:</strong> Senior executives seeking board appointments or C-level transitions</div>
+                        <ul>
+                            <li>6 months of premium 1:1 executive coaching</li>
+                            <li>Weekly 90-120 min sessions with Michael M. Schmidt or senior coaches</li>
+                            <li>24/7 WhatsApp support channel for strategic guidance</li>
+                            <li>Executive search intelligence and board positioning</li>
+                            <li>C-level salary benchmarking and negotiation mastery</li>
+                        </ul>
+                        <p><strong>Outcome:</strong> Secure C-level or board positions. 90% interview success rate.</p>
+                        <p class="investment">Investment: CHF 19,000 (6 months) or CHF 16,500 + 3% success fee</p>
+                        <a href="#final-cta" class="btn btn-primary cta">Schedule Confidential Consultation</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================== WHY CAREER BOOTCAMP WORKS SECTION =================== -->
+        <section class="why-it-works">
+            <div class="container">
+                <h2 class="section-title">Why 250+ Professionals Choose Career Bootcamp</h2>
+                <p class="section-subtitle">The Precision of a Boutique. The Power of Proven Expertise. Since 2019.</p>
+                <div class="grid">
+                    <div class="benefit-block">
+                        <div class="icon">🧠</div>
+                        <h3>Proprietary Career Bootcamp Method</h3>
+                        <p>Developed and refined since 2019, our structured CBC methodology combines the agility of personalized coaching with the rigor of proven frameworks. 96% success rate across 250+ clients.</p>
+                    </div>
+                    <div class="benefit-block">
+                        <div class="icon">👥</div>
+                        <h3>Hand-Selected Expert Coaching Team</h3>
+                        <p>Our hand-picked team of former C-level executives, CHROs, and headhunters brings 5,000+ collective coaching hours and real-world senior leadership experience.</p>
+                    </div>
+                    <div class="benefit-block">
+                        <div class="icon">🎯</div>
+                        <h3>Tailored Programs for Every Need</h3>
+                        <p>From self-paced online courses (Accelerate) to dynamic micro-group coaching (Elevate) to premium 1:1 executive coaching—we offer flexibility without sacrificing quality.</p>
+                    </div>
+                    <div class="benefit-block">
+                        <div class="icon">🤖</div>
+                        <h3>AI Integration & Modern Tools</h3>
+                        <p>Since 2019, we've pioneered AI-powered career coaching in Switzerland. Master cutting-edge tools for job search, personal branding, and 4x faster applications.</p>
+                    </div>
+                    <div class="benefit-block">
+                        <div class="icon">🇨🇭</div>
+                        <h3>Swiss Market Mastery & International Reach</h3>
+                        <p>Deep understanding of Swiss corporate culture, hidden job market dynamics, and local networking strategies—combined with global executive search expertise.</p>
+                    </div>
+                    <div class="benefit-block">
+                        <div class="icon">✅</div>
+                        <h3>Established Track Record & Guaranteed Results</h3>
+                        <p>Since 2019, we've placed professionals at UBS, Nestlé, Roche, Novartis, Google, and 30+ leading organizations. 100% money-back guarantee. Average ROI of 15x.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================== SUCCESS STORIES SECTION =================== -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2 class="section-title">Real People. Real Results. Real Career Success.</h2>
+                <div class="testimonial-slider">
+                    <div class="testimonial-slide active">
+                        <p>"As an expat, I was struggling to adapt my CV to Swiss standards. The personalized coaching and AI tools training were invaluable. My applications improved dramatically, and I started getting interviews almost immediately. The confidence boost was real!"</p>
+                        <p class="author"><strong>Eva L., Global Supply Manager, Pharmaceutical</strong></p>
+                        <p class="rating">⭐⭐⭐⭐⭐</p>
+                    </div>
+                    <div class="testimonial-slide">
+                        <p>"The ELEVATE program was a game-changer for my job search in Switzerland and Austria. The structured roadmap gave me the direction I needed. I landed my first job in just 20 weeks!"</p>
+                        <p class="author"><strong>Sandra K., Former Self-employed, now CEO Assistant</strong></p>
+                        <p class="rating">⭐⭐⭐⭐⭐</p>
+                    </div>
+                    <div class="testimonial-slide">
+                        <p>"Michael's Career Bootcamp methodology is truly one of a kind—high-impact, goal-driven, efficient and fun. If you want truly transformative executive career coaching, Michael is in a class of his own."</p>
+                        <p class="author"><strong>Dr. Andreas C., Sports Apparel Executive</strong></p>
+                        <p class="rating">⭐⭐⭐⭐⭐</p>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button id="prevTestimonial">&#10094;</button>
+                    <button id="nextTestimonial">&#10095;</button>
+                </div>
+                <div style="text-align:center; margin-top: 30px;">
+                    <a href="#" class="btn btn-secondary">Read More Success Stories</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================== CLIENT COMPANY LOGOS SECTION =================== -->
+        <section class="client-logos">
+            <div class="container">
+                <h3>Where Our Clients Have Landed</h3>
+                <div class="logo-grid">
+                    <!-- Replace with actual logos -->
+                    <img src="https://picsum.photos/seed/logo-ubs/150/50.jpg" alt="UBS Logo">
+                    <img src="https://picsum.photos/seed/logo-nestle/150/50.jpg" alt="Nestlé Logo">
+                    <img src="https://picsum.photos/seed/logo-roche/150/50.jpg" alt="Roche Logo">
+                    <img src="https://picsum.photos/seed/logo-novartis/150/50.jpg" alt="Novartis Logo">
+                    <img src="https://picsum.photos/seed/logo-google/150/50.jpg" alt="Google Logo">
+                    <img src="https://picsum.photos/seed/logo-swissre/150/50.jpg" alt="Swiss Re Logo">
+                    <img src="https://picsum.photos/seed/logo-abb/150/50.jpg" alt="ABB Logo">
+                    <img src="https://picsum.photos/seed/logo-schindler/150/50.jpg" alt="Schindler Logo">
+                </div>
+            </div>
+        </section>
+
+        <!-- =================== SWISS TAX DEDUCTION HIGHLIGHT =================== -->
+        <section class="tax-deduction">
+            <div class="container" style="max-width: 900px; display: flex; align-items: center;">
+                <span class="icon">💡</span>
+                <div>
+                    <h3>Pro Tip: Tax-Deductible Investment</h3>
+                    <p>In most Swiss cantons—including Zürich—career coaching qualifies as professional education and can be deducted from your taxes, up to CHF 12,400 per year. Consult your tax advisor to maximize your savings.</p>
+                    <a href="#" class="btn btn-secondary" style="margin-top: 10px;">Download Tax Deduction Guide</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================== HOW IT WORKS SECTION =================== -->
+        <section class="how-it-works">
+            <div class="container">
+                <h2 class="section-title">Your Journey to Career Success—Step by Step</h2>
+                <div class="timeline">
+                    <div class="timeline-step">
+                        <span class="icon">📅</span>
+                        <p>Book Your Free Strategy Call</p>
+                    </div>
+                    <div class="timeline-step">
+                        <span class="icon">🎯</span>
+                        <p>Choose Your Program</p>
+                    </div>
+                    <div class="timeline-step">
+                        <span class="icon">🚀</span>
+                        <p>Begin Your Transformation</p>
+                    </div>
+                    <div class="timeline-step">
+                        <span class="icon">👨‍🏫</span>
+                        <p>Get Expert Guidance</p>
+                    </div>
+                    <div class="timeline-step">
+                        <span class="icon">🏆</span>
+                        <p>Land Your Ideal Role</p>
+                    </div>
+                </div>
+                <div style="text-align:center; margin-top: 50px;">
+                    <a href="#final-cta" class="btn btn-primary">Start Your Journey Today</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================== FAQ SECTION =================== -->
+        <section class="faq">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">What makes Career Bootcamp different from other career coaches?</button>
+                        <div class="faq-answer">
+                            <p>Our proprietary CBC Method combines executive-level coaching, AI integration, Swiss market expertise, and a structured, time-boxed approach. We have a 96% success rate and over 5,000 hours of coaching experience.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Which program is right for me?</button>
+                        <div class="faq-answer">
+                            <p>Accelerate is best for self-directed learners wanting AI skills and fast results. Elevate suits professionals needing structure, community, and comprehensive support. Executive is for senior leaders seeking C-level or board positions with complete confidentiality.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Can I really deduct this from my Swiss taxes?</button>
+                        <div class="faq-answer">
+                            <p>Yes! In most cantons, career coaching qualifies as professional education (Weiterbildung) and is tax-deductible up to CHF 12,400/year. Consult your tax advisor for specifics.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">What if I'm not satisfied?</button>
+                        <div class="faq-answer">
+                            <p>We offer a 100% money-back guarantee: 20 days for Accelerate/Elevate, 4 weeks for Executive.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Do you work with expats?</button>
+                        <div class="faq-answer">
+                            <p>Absolutely! Over 60% of our clients are expats navigating the Swiss job market. We specialize in "Swissifying" applications and accessing the hidden job market.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================== FINAL CTA SECTION =================== -->
+        <section id="final-cta" class="final-cta">
+            <div class="container">
+                <h2>Ready to Secure Your Next Great Role?</h2>
+                <p class="subheadline">Join 250+ professionals who've transformed their careers with Career Bootcamp.</p>
+                <div class="cta-buttons">
+                    <a href="mailto:michael@career-bootcamp.net?subject=Book%20Free%20Strategy%20Call" class="btn btn-secondary" style="background-color:white; color: var(--primary-color);">Book Free Strategy Call</a>
+                    <a href="#" class="btn btn-secondary" style="border-color: white; color: white;">Download Program Brochure</a>
+                </div>
+                <div class="contact-info">
+                    <span>📞 +41 78 222 80 02</span>
+                    <span>✉ michael@career-bootcamp.net</span>
+                    <span>📍 Bahnhofplatz 1, 8001 Zürich</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =================== FOOTER =================== -->
+    <footer>
+        <div class="container">
+            <div class="grid">
+                <div>
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="#">Accelerate Program</a></li>
+                        <li><a href="#">Elevate Program</a></li>
+                        <li><a href="#">Executive Program</a></li>
+                        <li><a href="#">Compare Programs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Newsletter Archive</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Free Career Assessment</a></li>
+                        <li><a href="#">Tax Deduction Guide</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Michael M. Schmidt</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Our Method</a></li>
+                        <li><a href="#">Certifications</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                        <li><a href="#">Cookie Settings</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Career Bootcamp. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Mobile Menu Toggle ---
+        const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            // Optional: Change icon to 'X' when menu is open
+            const icon = mobileMenuIcon.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                const icon = mobileMenuIcon.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+
+        // --- FAQ Accordion ---
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const isActive = button.classList.contains('active');
+
+                // Close all other answers
+                document.querySelectorAll('.faq-question').forEach(otherButton => {
+                    otherButton.classList.remove('active');
+                    otherButton.nextElementSibling.classList.remove('show');
+                });
+
+                // Toggle current answer
+                if (!isActive) {
+                    button.classList.add('active');
+                    answer.classList.add('show');
+                }
+            });
+        });
+
+        // --- Testimonial Slider ---
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const nextBtn = document.getElementById('nextTestimonial');
+        const prevBtn = document.getElementById('prevTestimonial');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        // Optional: Auto-rotate slides
+        setInterval(nextSlide, 5000); // Change slide every 5 seconds
+
+    </script>
+
+</body>
+</html>
